@@ -9,8 +9,19 @@ def logic():
 	if b == a:
 		print("You got it correct")
 		print(b)
+		
+		c = input("Do you want to try again. Please input yes or no:  ")
+		if c == "yes":
+			logic()
+		else:
+			print("Goodbye.")
 	else:
 		print("Try again")
 		print(b)
-		logic()
+		d = input("Do you give up. Please input yes or no:  ")
+		if d == "yes":
+			print("Better lack next time.")
+		elif d == "no":
+			print("You mite gess the write number this time.")
+			logic()
 logic()
